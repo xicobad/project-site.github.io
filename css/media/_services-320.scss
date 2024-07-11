@@ -1,0 +1,156 @@
+@media (max-width: 767px) {
+   .chat,
+   .call,
+   .profile {
+      display: none;
+   }
+
+   .container {
+      max-width: 100%;
+      margin: 0 auto;
+   }
+
+   .header {
+      background-color: #fff;
+      min-height: 88px;
+      border-bottom: solid 1px $main__color;
+      padding: 16px 10px;
+      &__inner {
+      }
+      &__wrap {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         gap: 16px;
+      }
+   }
+
+   .menu {
+      &-img {
+      }
+   }
+
+   .logo {
+      margin-right: auto;
+      &__link {
+         &-img {
+         }
+      }
+   }
+
+   .repair {
+      border-left: 2px solid $border__header_color;
+      padding-left: 20px;
+      &__link {
+         &-img {
+         }
+         &-text {
+            font-size: 0px;
+         }
+      }
+   }
+
+   .checkstatus {
+      &__link {
+         &-img {
+         }
+         &-text {
+            font-size: 0px;
+         }
+      }
+   }
+
+   .main {
+      background-color: $bk_color;
+      padding: 16px 0;
+   }
+
+   .title {
+      margin: 24px 0;
+      position: relative;
+      font-weight: bold;
+      &-text {
+         margin-left: 16px;
+         font-size: 24px;
+         padding: 6px 0;
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 0;
+         bottom: 0;
+         width: 4px;
+         background-color: $border__title_color;
+         border-radius: 4px;
+      }
+   }
+
+   .slidemenu {
+      &__wrap {
+         display: flex;
+         overflow-x: auto;
+         white-space: nowrap;
+      }
+      &-text {
+         cursor: pointer;
+         & p {
+            font-weight: 500;
+            padding: 8px 16px;
+            margin-right: 10px;
+            border: 2px solid transparent;
+            border-radius: 7px;
+            transition: border-color 0.5s;
+         }
+         &:focus p,
+         &.active p {
+            background-color: #fff;
+            border-color: $main__color;
+         }
+      }
+   }
+
+   .fdback {
+      display: none;
+   }
+
+   .wrapper {
+      .subtitle {
+         margin: 0 0 16px 16px;
+         &-text {
+            width: 288px;
+            font-size: 14px;
+            letter-spacing: 0.2px;
+            line-height: normal;
+            .text-part-1 {
+               display: block;
+            }
+         }
+         &-p {
+            font-size: 14px;
+            letter-spacing: 0.2px;
+            padding: 24px 0 16px 0;
+         }
+         &-readmore {
+            font-weight: bold;
+            margin: 16px 0 0 0;
+            font-size: 16px;
+            & a {
+               display: flex;
+               align-items: center;
+            }
+            & span {
+               display: inline-block;
+               margin-left: 8px;
+            }
+         }
+      }
+   }
+
+   .image {
+      &-img {
+         height: auto;
+         border-radius: 15px;
+      }
+   }
+}

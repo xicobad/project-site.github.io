@@ -1,0 +1,62 @@
+@import "_variable";
+@import "media/services-768";
+@import "media/services-320";
+@import "media/services-1120";
+
+* {
+   font-family: "TT Lakes", sans-serif;
+   color: $text_color;
+}
+body {
+   background-color: $bk_color;
+}
+.subtitle-text {
+   .text-part-1,
+   .text-part-2,
+   .text-part-3,
+   .text-part-4 {
+      display: none;
+   }
+}
+
+.slidemenu {
+   &-text p {
+      color: $text_color-slider;
+   }
+}
+
+.title {
+   position: relative;
+   &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background-color: $border__title_color;
+      border-radius: 4px;
+   }
+}
+
+.animation {
+   &:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s ease-in-out;
+   }
+   &:active {
+      animation: clickAnimation 0.5s ease-in-out;
+   }
+}
+
+@keyframes clickAnimation {
+   0% {
+      transform: scale(1.1);
+   }
+   50% {
+      transform: scale(0.9);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
