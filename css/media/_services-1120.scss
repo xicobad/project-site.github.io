@@ -2,10 +2,7 @@
    * {
       background-color: $bk_color;
    }
-   .container {
-      max-width: 100%;
-      margin: 0 auto;
-   }
+   
    .header {
       position: relative;
       top: 65px;
@@ -27,11 +24,9 @@
       display: none;
    }
 
-   .header_wrap {
-   }
-
    .menu {
       &-img {
+         display: none;
       }
 
       &-nav {

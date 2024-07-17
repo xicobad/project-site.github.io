@@ -5,10 +5,7 @@
       display: none;
    }
 
-   .container {
-      max-width: 100%;
-      margin: 0 auto;
-   }
+
 
    .header {
       background-color: #fff;
@@ -116,9 +113,8 @@
 
    .wrapper {
       .subtitle {
-         margin: 0 0 16px 16px;
+         margin: 0 16px 16px 16px;
          &-text {
-            width: 288px;
             font-size: 14px;
             letter-spacing: 0.2px;
             line-height: normal;
