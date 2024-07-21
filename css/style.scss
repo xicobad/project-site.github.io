@@ -93,7 +93,7 @@ body {
       opacity: 1;
    }
    &-info {
-      height: 80vh;
+      height: 85vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -102,14 +102,26 @@ body {
       display: flex;
       flex-direction: column;
       ul {
-         list-style: none;
          li:not(:last-child) {
             margin-bottom: 32px;
          }
          a {
-            color: #333;
-            text-decoration: none;
             font-size: 18px;
+            position: relative;
+            transition: color 0.3s ease;
+
+            &:hover {
+               &::before {
+                  content: "";
+                  position: absolute;
+                  left: -20px;
+                  top: 0;
+                  bottom: 0;
+                  width: 4px;
+                  background-color: $border__title_color;
+                  border-radius: 4px;
+               }
+            }
          }
       }
 
@@ -118,20 +130,22 @@ body {
             display: flex;
             flex-direction: column;
             margin-bottom: 20px;
-            a {
-               color: $text_color-slider;
-               font-size: 24px;
-               line-height: 32px;
-            }
             a:not(:last-child) {
                margin-bottom: 12px;
+               font-size: 16px;
+               line-height: 24px;
+               font-weight: 600;
             }
             a:not(:first-child) {
                margin-bottom: 40px;
+               font-size: 24px;
+               line-height: 32px;
+               font-weight: 600;
             }
          }
          .social-media {
             display: flex;
+            margin-bottom: 20px;
             a {
                margin-right: 10px;
             }
@@ -140,8 +154,6 @@ body {
             margin-top: 10px;
             a {
                margin-right: 10px;
-               color: #333;
-               text-decoration: none;
                font-size: 14px;
             }
          }
@@ -150,9 +162,6 @@ body {
 }
 
 .menu-img {
-   cursor: pointer;
-   background: none;
-   border: none;
    a {
       display: inline-block;
    }
