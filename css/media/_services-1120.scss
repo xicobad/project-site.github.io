@@ -2,7 +2,7 @@
    * {
       background-color: $bk_color;
    }
-   
+
    .header {
       position: relative;
       top: 65px;
@@ -71,7 +71,7 @@
       &__link {
          display: flex;
          align-items: center;
-         
+
          &-img {
          }
          &-text {
@@ -80,8 +80,8 @@
             font-weight: 600;
             margin-right: 8px;
             &:hover {
-               color: red;
-            } 
+               color: $pink;
+            }
          }
       }
    }
@@ -91,6 +91,7 @@
       &__link {
          display: flex;
          align-items: center;
+
          &-img {
          }
          &-text {
@@ -98,6 +99,9 @@
             line-height: 24px;
             font-weight: 600;
             margin-right: 8px;
+            &:hover {
+               color: $pink;
+            }
          }
       }
    }
@@ -139,7 +143,7 @@
          }
          &:focus p,
          &.active p {
-            background-color: #fff;
+            background-color: $white;
             border-color: $main__color;
          }
       }
@@ -178,15 +182,6 @@
             font-size: 14px;
             letter-spacing: 0.2px;
          }
-         &-readmore {
-            & a {
-            }
-            & span {
-               font-size: 16px;
-               margin-left: 8px;
-               font-weight: 700;
-            }
-         }
       }
       .image {
          margin-right: 28px;
@@ -197,5 +192,46 @@
             border-radius: 15px;
          }
       }
+   }
+
+   .brands {
+      margin: 40px 30px 24px 24px;
+      &-text {
+         color: $text_color-slider;
+         font-size: 16px;
+         line-height: 24px;
+         padding-bottom: 32px;
+         text-transform: uppercase;
+      }
+   }
+   .swiper {
+      &-wrapper {
+         display: grid;
+         grid-template-columns: repeat(4, 1fr);
+         gap: 32px;
+      }
+      &-slide {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 10px;
+         border-radius: 10px;
+         background: $white;
+         box-shadow: 6px 5px 20px rgba(0, 0, 0, 0.1);
+         a {
+            background: $white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+         }
+      }
+      .swiper-pagination {
+         display: none;
+      }
+   }
+
+   .hidden {
+      display: none;
    }
 }

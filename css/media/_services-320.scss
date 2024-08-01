@@ -6,7 +6,7 @@
    }
 
    .header {
-      background-color: #fff;
+      background-color: $white;
       min-height: 88px;
       border-bottom: solid 1px $main__color;
       padding: 16px 10px;
@@ -21,7 +21,8 @@
    }
 
    .menu {
-      &-img {
+      .close-menu {
+         margin-right: 10px;
       }
    }
 
@@ -99,7 +100,7 @@
          }
          &:focus p,
          &.active p {
-            background-color: #fff;
+            background-color: $white;
             border-color: $main__color;
          }
       }
@@ -125,19 +126,6 @@
             letter-spacing: 0.2px;
             padding: 24px 0 16px 0;
          }
-         &-readmore {
-            font-weight: bold;
-            margin: 16px 0 0 0;
-            font-size: 16px;
-            & a {
-               display: flex;
-               align-items: center;
-            }
-            & span {
-               display: inline-block;
-               margin-left: 8px;
-            }
-         }
       }
    }
 
@@ -145,18 +133,18 @@
       &-img {
          height: auto;
          border-radius: 15px;
+         width: 100%;
       }
    }
 
    .brands {
-      height: 320px;
-      margin-top: 30px;
+      margin: 30px 0 0 16px;
       &-text {
          color: $text_color-slider;
          font-size: 16px;
          line-height: 24px;
          padding-bottom: 32px;
-         text-align: center;
+         text-transform: uppercase;
       }
    }
 
@@ -164,8 +152,7 @@
       &-wrapper {
          display: flex;
          align-items: center;
-         margin-bottom: 16px;
-
+         margin-bottom: 32px;
       }
 
       &-slide {
@@ -175,16 +162,22 @@
          align-items: center;
          padding: 10px;
          border-radius: 10px;
-         background: #f7f7f7;
+         background: $white;
          border-radius: 10px;
-         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            img {
-               max-width: 100%;
-               height: auto;
-            }
+         box-shadow: 6px 5px 20px rgba(0, 0, 0, 0.1);
+         img {
+            max-width: 100%;
+            height: auto;
+         }
+         a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+         }
       }
-
-      &-pagination {
-      }
+   }
+   .none {
+      display: none;
    }
 }

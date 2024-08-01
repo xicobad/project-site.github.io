@@ -93,7 +93,7 @@ body {
       opacity: 1;
    }
    &-info {
-      height: 85vh;
+      height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -164,5 +164,19 @@ body {
 .menu-img {
    a {
       display: inline-block;
+   }
+}
+
+.subtitle-readmore {
+   font-weight: bold;
+   margin: 16px 0px 0px 0px;
+   font-size: 16px;
+   a {
+      display: flex;
+      align-items: center;
+   }
+   & span {
+      display: inline-block;
+      margin-left: 8px;
    }
 }
