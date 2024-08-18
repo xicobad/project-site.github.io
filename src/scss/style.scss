@@ -1,13 +1,20 @@
-@import "_variable";
+@import "_variable.scss";
 @import "../scss/mixin/mixin.scss";
-@import "media/services-768";
-@import "media/services-320";
-@import "media/services-1120";
+@import "media/services-320.scss";
+@import "media/services-768.scss";
+@import "media/services-1120.scss";
+@import "media/feedback.scss";
 
 * {
   font-family: "TT Lakes", sans-serif;
   color: $text_color;
 }
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100;
+}
+
 body {
   background-color: $bk_color;
 }
@@ -181,3 +188,9 @@ body {
     margin-left: 8px;
   }
 }
+
+.swiper {
+  padding-bottom: 10px;
+}
+
+@import "media/burgerMenu.scss";

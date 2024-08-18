@@ -200,36 +200,61 @@
 
   .brands {
     margin: 40px 30px 24px 24px;
-    &-text {
-      color: $text_color-slider;
-      font-size: 16px;
-      line-height: 24px;
-      padding-bottom: 32px;
-      text-transform: uppercase;
+    &__title {
+      @include title();
+    }
+    &__item {
+      align-items: center;
+      padding: 20px;
+      border-radius: 12px;
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    &__link {
+    }
+
+    &__image {
+    }
+
+    &__arrow {
+      position: absolute;
+      right: 20px;
+    }
+
+    &__more {
+      display: block;
+      margin-top: 24px;
+      text-align: center;
+
+      img {
+        margin-right: 8px;
+      }
     }
   }
+
   .swiper {
     &-wrapper {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
+
     &-slide {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      border-radius: 10px;
+      padding: 16px;
       background: $white;
-      box-shadow: 6px 5px 20px rgba(0, 0, 0, 0.1);
-      a {
-        background: $white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-      }
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
     .swiper-pagination {
       display: none;
     }
@@ -282,6 +307,7 @@
     }
 
     &__link {
+      background-color: transparent;
       position: absolute;
       bottom: 16px;
       right: 16px;
@@ -289,6 +315,48 @@
 
     &__more {
       @include readmore();
+    }
+  }
+
+  .footer {
+    background-color: #f9f9f9;
+    padding: 32px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+
+    &__wrap {
+      text-align: start;
+    }
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    &__copyright {
+      color: $text_color-slider;
+    }
+    &__development {
+      color: $text_color-slider;
+    }
+    &__privacy-policy {
+      color: $text_color-slider;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &__disclaimer {
+      color: $text_color-slider;
+      width: 330px;
+      text-align: right;
+    }
+
+    .footer__container {
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 }

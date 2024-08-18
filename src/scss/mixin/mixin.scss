@@ -19,3 +19,10 @@
       margin-left: 8px;
    }
 }
+
+@mixin serv-title() {
+   font-size: 14px;
+   font-weight: 500;
+   color: $text_color;
+   margin-bottom: 4px;
+}

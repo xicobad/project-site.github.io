@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
   closeButton.addEventListener('click', function () {
     menu.classList.remove('open');
   });
+
+  if (window.innerWidth >= 1120) {
+    menu.classList.add('open');
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -33,26 +37,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  document
-    .getElementById('showMoreBtn2')
-    .addEventListener('click', function () {
-      const hiddenItems = document.querySelectorAll(
-        '.repair-types__item.hidden',
-      );
+  const showMoreBtn = document.getElementById('showMoreBtn2');
+  const hiddenItems = document.querySelectorAll('.repair-types__item.hidden');
+
+  showMoreBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    if (showMoreBtn.classList.contains('repair-types__more--open')) {
+      hiddenItems.forEach(function (item) {
+        item.classList.add('hidden');
+      });
+      showMoreBtn.querySelector('span').textContent = 'Показать все';
+      showMoreBtn.classList.remove('repair-types__more--open');
+    } else {
       hiddenItems.forEach(function (item) {
         item.classList.remove('hidden');
       });
-
-      const moreButton = document.getElementById('showMoreBtn2');
-      const moreText = moreButton.querySelector('span');
-      const isOpen = moreButton.classList.contains('repair-types__more--open');
-
-      if (isOpen) {
-        moreText.textContent = 'Показать все';
-        moreButton.classList.remove('repair-types__more--open');
-      } else {
-        moreText.textContent = 'Скрыть';
-        moreButton.classList.add('repair-types__more--open');
-      }
-    });
+      showMoreBtn.querySelector('span').textContent = 'Скрыть';
+      showMoreBtn.classList.add('repair-types__more--open');
+    }
+  });
 });

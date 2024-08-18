@@ -1,0 +1,56 @@
+@media (min-width: 1120px) {
+   .content {
+      margin-left: 310px; // Отступ влево равен ширине меню
+      transition: margin-left 0.3s ease;
+   }
+
+   .menu.open + .content {
+      margin-left: 310px; // Отступ при открытом меню
+   }
+
+   .menu {
+      box-shadow: 0 0 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 320px;
+      height: 100%;
+      background-color: $white;
+      z-index: 10;
+      transform: translateX(-300px); // Скрываем меню за границей экрана
+      transition: transform 0.3s ease;
+   }
+
+   .menu.open {
+      color: $white;
+      transform: translateX(0); // Выдвигаем меню при открытии
+   }
+
+   .menu-nav {
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+   }
+
+   .menu-header {
+      color: $white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+   }
+
+   .menu-info {
+      flex-grow: 1;
+      padding: 20px;
+   }
+
+   .menu-footer {
+      padding: 20px;
+   }
+
+   .menu-img {
+      display: none;
+   }
+}
