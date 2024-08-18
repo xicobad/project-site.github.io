@@ -3,8 +3,8 @@
 @import "media/services-320.scss";
 @import "media/services-768.scss";
 @import "media/services-1120.scss";
-@import "media/feedback.scss";
-
+@import "media/_feedback.scss";
+@import "media/_call-modal.scss";
 * {
   font-family: "TT Lakes", sans-serif;
   color: $text_color;
@@ -12,7 +12,7 @@
 html,
 body {
   overflow-x: hidden;
-  max-width: 100;
+  max-width: 100%;
 }
 
 body {
@@ -191,6 +191,10 @@ body {
 
 .swiper {
   padding-bottom: 10px;
+}
+.pink {
+  color: $pink;
+  background-color: $white;
 }
 
 @import "media/burgerMenu.scss";

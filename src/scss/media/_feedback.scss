@@ -1,0 +1,216 @@
+@media (max-width: 1119px) {
+   .feedback-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+         opacity 0.3s ease,
+         visibility 0.3s ease;
+      z-index: 100;
+   }
+
+   .feedback-modal__content {
+      background-color: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      width: 90%;
+      height: 600px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: relative;
+   }
+
+   .feedback-modal__close {
+      margin-bottom: 40px;
+      cursor: pointer;
+      z-index: 10;
+   }
+
+   .feedback-modal__title {
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 24px;
+      position: relative;
+
+      &::before {
+         content: "";
+         position: absolute;
+         left: -16px;
+         height: 100%;
+         width: 4px;
+         background-color: $border__title_color;
+      }
+   }
+
+   .feedback-modal__form {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .feedback-modal__input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+   }
+
+   .feedback-modal__textarea {
+      resize: none;
+   }
+
+   .feedback-modal__text {
+      font-size: 14px;
+      color: $text_color-slider;
+      margin-bottom: 20px;
+   }
+
+   .feedback-modal__submit {
+      width: 136px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      background-color: $pink;
+      color: $white;
+      border-radius: 20px;
+      font-weight: 500;
+      margin-left: auto;
+
+      &:hover {
+         background-color: darken($pink, 10%);
+      }
+   }
+   .feedback-modal--show {
+      opacity: 1;
+      visibility: visible;
+   }
+}
+
+@media (min-width: 1119px) {
+   .feedback-modal {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+
+      &--show {
+         transform: translateX(0);
+      }
+
+      &__content {
+         padding: 40px;
+         position: relative;
+      }
+
+      &__close {
+         position: absolute;
+         top: 20px;
+         left: -50px;
+         cursor: pointer;
+         z-index: 10;
+         display: none;
+      }
+
+      &__title {
+         font-size: 24px;
+         margin-bottom: 20px;
+         padding-left: 10px;
+         text-align: left;
+         font-weight: 700;
+         position: relative;
+
+         &::before {
+            content: "";
+            position: absolute;
+            left: -40px;
+            height: 100%;
+            width: 4px;
+            background-color: $border__title_color;
+         }
+      }
+
+      &__form {
+         display: flex;
+         flex-direction: column;
+      }
+
+      &__input {
+         padding: 15px;
+         margin-bottom: 15px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         font-size: 16px;
+      }
+
+      &__textarea {
+         resize: none;
+      }
+
+      &__text {
+         font-size: 14px;
+         color: $text_color-slider;
+         margin-bottom: 20px;
+      }
+
+      &__submit {
+         width: 136px;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         height: 32px;
+         background-color: $pink;
+         color: $white;
+         border-radius: 20px;
+         font-weight: 500;
+         margin-left: auto;
+
+         &:hover {
+            background-color: darken($pink, 10%);
+         }
+      }
+   }
+
+   .content-blur {
+      filter: blur(5px);
+      pointer-events: none;
+      user-select: none;
+   }
+
+   .feedback-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+         opacity 0.3s ease,
+         visibility 0.3s ease;
+
+      &--show {
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+
+   .feedback-modal--show .feedback-modal__close {
+      display: block;
+   }
+}

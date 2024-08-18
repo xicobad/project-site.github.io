@@ -14,6 +14,77 @@
   </head>
 
   <body>
+    <div class="feedback-modal" id="feedbackModal">
+      <div class="feedback-modal__content">
+        <button class="feedback-modal__close" id="feedbackModalClose">
+          <img src="images/header/close.svg" alt="close" />
+        </button>
+        <h2 class="feedback-modal__title">Обратная связь</h2>
+        <form class="feedback-modal__form">
+          <input
+            type="text"
+            class="feedback-modal__input"
+            placeholder="Имя"
+            required
+          />
+          <input
+            type="tel"
+            class="feedback-modal__input"
+            placeholder="Телефон"
+            required
+          />
+          <input
+            type="email"
+            class="feedback-modal__input"
+            placeholder="Электронная почта"
+            required
+          />
+          <textarea
+            class="feedback-modal__input feedback-modal__textarea"
+            placeholder="Сообщение"
+            required
+          ></textarea>
+          <p class="feedback-modal__text">
+            Нажимая "отправить", вы даете согласие на
+            <a href="#" class="pink">обработку персональных данных</a> и
+            соглашаетесь с нашей
+            <a href="#" class="pink">политикой конфиденциальности</a>.
+          </p>
+          <button type="submit" class="feedback-modal__submit">
+            Отправить
+            <img src="/public/images/services-prices/goside.svg" alt="" />
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="call-modal" id="callModal">
+      <div class="call-modal__content">
+        <button class="call-modal__close" id="callModalClose">
+          <img src="images/header/close.svg" alt="close" />
+        </button>
+        <h2 class="call-modal__title">Заказать звонок</h2>
+        <form class="call-modal__form">
+          <input
+            type="tel"
+            class="call-modal__input"
+            placeholder="Телефон"
+            required
+          />
+          <p class="call-modal__text">
+            Нажимая "отправить", вы даете согласие на
+            <a class="pink" href="#">обработку персональных данных</a>
+            и соглашаетесь с нашей
+            <a class="pink" href="#">политикой конфиденциальности</a>.
+          </p>
+          <button type="submit" class="call-modal__submit">
+            Отправить
+            <img src="/public/images/services-prices/goside.svg" alt="" />
+          </button>
+        </form>
+      </div>
+    </div>
+
     <div class="content">
       <header class="header">
         <div class="container">
