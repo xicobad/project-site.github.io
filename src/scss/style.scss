@@ -3,8 +3,11 @@
 @import "media/services-320.scss";
 @import "media/services-768.scss";
 @import "media/services-1120.scss";
+@import "media/_swiper.scss";
+@import "media/_burgerMenu.scss";
 @import "media/_feedback.scss";
 @import "media/_call-modal.scss";
+
 * {
   font-family: "TT Lakes", sans-serif;
   color: $text_color;
@@ -75,106 +78,6 @@ body {
   }
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  left: -320px;
-  opacity: 0;
-  width: 320px;
-  height: 100%;
-  background-color: #fff;
-  transition:
-    left 0.3s ease,
-    opacity 0.3s ease;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
-  z-index: 5;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  &-header {
-    display: flex;
-    margin-bottom: 53px;
-  }
-  &.open {
-    left: -10px;
-    opacity: 1;
-  }
-  &-info {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  &-nav {
-    display: flex;
-    flex-direction: column;
-    ul {
-      li:not(:last-child) {
-        margin-bottom: 32px;
-      }
-      a {
-        font-size: 18px;
-        position: relative;
-        transition: color 0.3s ease;
-
-        &:hover {
-          &::before {
-            content: "";
-            position: absolute;
-            left: -20px;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background-color: $border__title_color;
-            border-radius: 4px;
-          }
-        }
-      }
-    }
-
-    .menu-footer {
-      .contacts {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        a:not(:last-child) {
-          margin-bottom: 12px;
-          font-size: 16px;
-          line-height: 24px;
-          font-weight: 600;
-        }
-        a:not(:first-child) {
-          margin-bottom: 40px;
-          font-size: 24px;
-          line-height: 32px;
-          font-weight: 600;
-        }
-      }
-      .social-media {
-        display: flex;
-        margin-bottom: 20px;
-        a {
-          margin-right: 10px;
-        }
-      }
-      .languages {
-        margin-top: 10px;
-        a {
-          margin-right: 10px;
-          font-size: 14px;
-        }
-      }
-    }
-  }
-}
-
-.menu-img {
-  a {
-    display: inline-block;
-  }
-}
-
 .subtitle-readmore {
   font-weight: bold;
   margin: 16px 0px 0px 0px;
@@ -189,12 +92,11 @@ body {
   }
 }
 
-.swiper {
-  padding-bottom: 10px;
-}
 .pink {
   color: $pink;
   background-color: $white;
 }
 
-@import "media/burgerMenu.scss";
+.footer {
+  border-top: 1px solid $border;
+}

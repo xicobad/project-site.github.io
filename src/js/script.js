@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   const callModal = document.getElementById('callModal');
-  const openCallModalButton = document.querySelector('.repair__link'); // Кнопка "Оставить заявку"
+  const openCallModalButton = document.querySelector('.repair__link');
   const closeCallModalButton = document.getElementById('callModalClose');
   const content = document.querySelector('.content');
 
@@ -132,4 +132,21 @@ document.addEventListener('DOMContentLoaded', function () {
       content.classList.remove('content-blur');
     }
   });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const closeButton = document.querySelector('.close-menu');
+
+  function updateCloseButtonImage() {
+    if (window.innerWidth >= 1120) {
+      closeButton.querySelector('img').src = 'images/header/logo.svg';
+      closeButton.disabled = true;
+    } else {
+      closeButton.querySelector('img').src = 'images/header/close.svg';
+    }
+  }
+
+  updateCloseButtonImage();
+
+  window.addEventListener('resize', updateCloseButtonImage);
 });

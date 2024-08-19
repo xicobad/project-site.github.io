@@ -2,8 +2,14 @@
    color: $text_color-slider;
    font-size: 16px;
    line-height: 24px;
-   padding-bottom: 32px;
+   margin-bottom: 32px;
    text-transform: uppercase;
+   height: 56px;
+   background-color: #fff;
+   border-top: 1px solid $border;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
 
 @mixin readmore() {
