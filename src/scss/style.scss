@@ -5,6 +5,7 @@
 @import "media/services-1120.scss";
 @import "media/_swiper.scss";
 @import "media/_burgerMenu.scss";
+@import "media/_pricing.scss";
 @import "media/_feedback.scss";
 @import "media/_call-modal.scss";
 
@@ -47,7 +48,7 @@ body {
   &::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: -24px;
     top: 0;
     bottom: 0;
     width: 4px;

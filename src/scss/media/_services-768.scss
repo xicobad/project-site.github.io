@@ -117,7 +117,6 @@
       white-space: nowrap;
     }
     &-text {
-      cursor: pointer;
       & p {
         font-weight: 500;
         padding: 8px 16px;
@@ -303,95 +302,12 @@
     }
   }
 
-  .services-prices {
-    padding: 24px;
-
-    &__title {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 16px;
-    }
-
-    &__list {
-      padding: 16px 0;
-    }
-
-    &__item {
-      padding: 16px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    &__content {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    &__category {
-      font-size: 14px;
-      font-weight: 500;
-      color: $text_color-slider;
-    }
-
-    &__name {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    &__details {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12px;
-    }
-
-    &__label {
-      font-weight: 500;
-      color: $text_color-slider;
-    }
-
-    &__info {
-      font-weight: 400;
-      color: $text_color;
-    }
-
-    &__info-block {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 12px;
-    }
-
-    &__order {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 16px;
-      background-color: $pink;
-      color: $white;
-      border-radius: 20px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: darken($pink, 10%);
-      }
-
-      img {
-        margin-left: 8px;
-      }
-    }
-  }
-
   .footer {
     background-color: $bk_color;
     padding: 32px 24px;
     text-align: center;
     font-size: 14px;
-    color: $bk_color_slider &__wrap;
+    color: $bk_color_slider;
 
     &__container {
       display: flex;
@@ -401,6 +317,7 @@
       gap: 10px;
     }
     &__copyright {
+      text-align: left;
       color: $text_color-slider;
     }
     &__development {
